@@ -794,13 +794,7 @@ def Start_iptv_palyer(session, **kwargs):
     if STREAMS.ar_start:
         eAVSwitch.getInstance().setAspectRatio(STREAMS.ar_id_start)
         print 'setAspectRatio(STREAMS.ar_id_start)'
-    try:
-        YOUTUBE = youtube_url()
-        GOSHA_PARSER = gosha_parsers()
-        ARSHAVIR_PARSER = arshavir_parsers()
-    except Exception as ex:
-        print ex
-        print 'PARSER ERROR'
+    
 
     if STREAMS.use_rtmpw:
         try:
@@ -2520,8 +2514,6 @@ class artvplayer(Screen, InfoBarBase, IPTVInfoBarShowHide, InfoBarSeek, InfoBarA
             self.vod_url = STREAMS.playhack
         print '++++++++++parse_url+++++++++++'
         try:
-            self.vod_url = GOSHA_PARSER.get_parsed_link(self.vod_url)
-            self.vod_url = ARSHAVIR_PARSER.get_parsed_link(self.vod_url)
             url = self.vod_url
             self.film_quality = None
             video_host = ''
