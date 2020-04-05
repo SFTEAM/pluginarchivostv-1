@@ -1,4 +1,4 @@
-# coding: utf-8
+## coding: utf-8
 import nVars
 from Plugins.Plugin import PluginDescriptor
 from Components.MultiContent import MultiContentEntryText, MultiContentEntryPixmapAlphaTest
